@@ -33,7 +33,22 @@ Console.WriteLine(d.delegatewithParamReturn(3));
 d.TestFunc = (int i, float j) => Console.WriteLine("Build-in delegates");
 
 d.TestFuncReturn = (int j) => { return j < 5; };
-Console.WriteLine(d.TestFuncReturn(8)); 
+Console.WriteLine(d.TestFuncReturn(8));
+
+
+Console.WriteLine("Testing Events");
+EventSample eventSample = new EventSample();
+eventSample.stringEvent += eventSample.ToLower;
+
+string str;
+do
+{
+    str = Console.ReadLine();
+    if (!str.Equals("exit"))
+    {
+        eventSample.SetString = str;
+    }
+} while (!str.Equals("exit"));
 
 
 
