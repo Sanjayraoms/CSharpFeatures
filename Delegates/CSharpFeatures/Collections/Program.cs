@@ -47,4 +47,5 @@ foreach (DictionaryEntry item in sorted)
 Console.WriteLine($"Capacity : {sorted.Capacity}");
 Console.WriteLine("===========================================================");
 Console.WriteLine("Stack");
+Stack<int> ints = new Stack<int>();
 Console.Read();
